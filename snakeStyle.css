@@ -1,0 +1,102 @@
+@import url('http://fonts.cdnfonts.com/css/arcade-classic');
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    width: 100vmin;
+    height: 100vmin;
+    margin: 0 auto;
+    background-color: yellow;
+    display: grid;
+    place-items: center;
+    grid-template-areas: "inner-div";
+}
+
+#gameBoard {
+    background-color: transparent;
+    width: 100vmin;
+    height: 100vmin;
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    grid-area: inner-div;
+}
+
+#gameBoardObstacles {
+    background-color: #ccc;
+    width: 100vmin;
+    height: 100vmin;
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    grid-area: inner-div;
+}
+
+#menu {
+    width: 35vmin;
+    height: 60vmin;
+    background-color: floralwhite;
+    display: inline;
+    text-align: center;
+    margin-left: 2vmin;
+    margin-right: 10vmin;
+    border: 0.75vmin solid darkorange;
+    visibility: hidden;
+    font-family: 'ArcadeClassic', sans-serif;
+}
+
+#scoreBoard {
+    display: inline;
+    background-color: floralwhite;
+    text-align: center;
+    font-family: 'ArcadeClassic', sans-serif;
+    height: 15vmin;
+    width: 15vmin;
+    margin-left: 0;
+}
+
+.snake {
+    background-color: blueviolet;
+    border: .25vmin solid black;
+}
+
+.snakeSlow {
+    background-color: darkgreen;
+    border: .25vmin solid black;
+}
+
+.snakeInvincible {
+    background-color: rgb(226, 78, 9);
+    border: .25vmin solid black;
+}
+
+.food {
+    background-color: yellow;
+    border: .25vmin solid black;
+    border-radius: 50%;
+}
+
+.food2 {
+    background-color: pink;
+    border: .25vmin solid black;
+    border-radius: 50%;
+}
+
+.food3 {
+    background-color: crimson;
+    border: .25vmin solid black;
+    border-radius: 50%;
+}
+
+.obstacle {
+    background-color: grey;
+    border: .25vmin solid rgb(241, 8, 8);
+}

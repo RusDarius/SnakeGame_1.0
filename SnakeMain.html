@@ -1,0 +1,99 @@
+<!-- 
+    This is the main HTML file for the game.
+    The game created is a simple snake game that has multiple courses available with differing difficulties
+    The game folows the basic rules of snake and a few special added features such as:
+    - a menu that can be activated through the key "M" (press again to dismiss)
+        - the settings can be done be pressing ok
+    - 3 types of food:
+        - yellow food provides a speed of 10, a growth by 3 units 
+        - pink food provides a speed of 5, a growth by 1 unit
+        - crimson food provides no growth, but makes the player imune to obstacles until
+        a timer expires and the player consumes pink or yellow food
+    - the food is reset each time a type is eaten
+    - the game has different courses with obstacles that provide an added level of difficulty (0 - 4)
+    - the snake can travel through the games boundries 
+    - the grid size cand be decided in the menu
+    - the speed of the can be set from the menu aswell
+ -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/arcade-classic" rel="stylesheet">
+    <link rel="stylesheet" href="snakeStyle.css">
+
+    <title>Snake Game</title>
+</head>
+
+<script src="game.js" defer type="module">
+// the game.js is the main JS file
+</script>
+
+<body>
+
+    <div id="menu">
+
+        <!-- 
+            The game menu interface
+        -->
+
+        <h3>Game settings</h3><br>
+
+        <label for="gridSize">Grid size</label>
+        <input type="number" id="gridSize" maxlength="2" size="2" min="21" max="43" value="21" step="2"><br><br>
+
+        <label for="snakeSpeed">Snake speed</label>
+        <select id="snakeSpeed">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="7.5" selected="true">7.5</option>
+            <option value="10">10</option>
+            <option value="12.5">12.5</option>
+            <option value="15">15</option>
+        </select>
+        <br><br>
+
+        <label for="gameLevels">Game course dificulty</label>
+        <select id="gameLevels">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <br><br>
+
+        <button id="menuVals" style="background-color: rgb(255, 214, 80);">ok</button>
+
+
+    </div>
+
+    <!-- 
+        The score board
+    -->
+
+    <div id="scoreBoard">
+        <h3 style="color: darkgreen;">Score<h3>
+                <h3 id="score"></h3>
+    </div>
+
+    <div class="container">
+
+        <div id="gameBoardObstacles">
+
+        </div>
+
+        <div id="gameBoard">
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
